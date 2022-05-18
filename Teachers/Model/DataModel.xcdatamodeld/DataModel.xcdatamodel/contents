@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Achievement" representedClassName="Achievement" syncable="YES">
+        <attribute name="achId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="complete" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="need" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="needText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="GameData" representedClassName="GameData" syncable="YES">
+        <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="options" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="showtrues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ShowTrue" inverseName="gameData" inverseEntity="ShowTrue" syncable="YES"/>
+    </entity>
+    <entity name="ShowTrue" representedClassName="ShowTrue" syncable="YES">
+        <attribute name="gameId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="gameData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GameData" inverseName="showtrues" inverseEntity="GameData" syncable="YES"/>
+    </entity>
+    <entity name="UserData" representedClassName="UserData" syncable="YES">
+        <attribute name="collectedGold" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="currentAch" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="currentGold" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="currentLv" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="currentResource" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="effect" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="luCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="music" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="share" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="shareDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="showTrue" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="showTrueTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="totalLevelNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="useLuTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="wrong" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="wrongAnswer" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Achievement" positionX="-45" positionY="45" width="128" height="150"/>
+        <element name="GameData" positionX="-54" positionY="9" width="128" height="133"/>
+        <element name="ShowTrue" positionX="-45" positionY="45" width="128" height="88"/>
+        <element name="UserData" positionX="-63" positionY="-18" width="128" height="285"/>
+    </elements>
+</model>

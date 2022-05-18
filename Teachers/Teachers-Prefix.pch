@@ -1,0 +1,28 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "Config.h"
+    #import "SimpleAudioEngine.h"
+#endif
+
+//#import "SynthesizeSingleton.h"
+
+
+#define FZFontName @"FZLTXIHJW--GB1-0"
+#define BgColor_Egg [UIColor colorWithRed:248.0/255 green:240.0/255 blue:235.0/255 alpha:1]
+#define BgColor_Green [UIColor colorWithRed:14.0/255 green:119.0/255 blue:131.0/255 alpha:1]
+#define BgColor_Blue [UIColor colorWithRed:176.0/255 green:210.0/255 blue:223.0/255 alpha:1]
+#define APP_VERSION [[[NSBundle mainBundle]infoDictionary]objectForKey:@"CFBundleShortVersionString"]
+#define APP_APPLE_ID 886110733
